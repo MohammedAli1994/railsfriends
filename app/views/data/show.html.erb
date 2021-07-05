@@ -1,0 +1,12 @@
+
+
+<div class="jumbotron">
+  <h1 class="display-4"><%= @datum.first_name %> <%= @datum.last_name %> </h1>
+  <p class="lead"><%= @datum.email %> | <%= @datum.Linkdin %> | <%= @datum.phone %>  </p>
+  <br/>
+  <%= link_to 'Edit', edit_datum_path(@datum),class:"btn btn-secondary" %>
+
+  <%= link_to 'Delete', @datum, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger "%>
+  
+  <%= link_to 'Back', data_path,class:"btn btn-dark" %>
+</div>
